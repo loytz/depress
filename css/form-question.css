@@ -1,0 +1,119 @@
+.radio-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+  h3 {
+    margin-bottom: 25px;
+  }
+  .radio-item [type="radio"] {
+    display: none;
+  }
+  .radio-item + .radio-item {
+    margin-top: 15px;
+  }
+  .radio-item label {
+    display: block;
+    padding: 20px 60px;
+    border: 2px solid rgba(255, 255, 255, 0.804);
+    background-color: rgba(6, 17, 51, 0.273);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    min-width: 250px;
+    white-space: nowrap;
+    position: relative;
+    transition: 0.4s ease-in-out 0s;
+  }
+  .radio-item label:after,
+  .radio-item label:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+  .radio-item label:after {
+    height: 19px;
+    width: 19px;
+    border: 2px solid #ffffff;
+    left: 19px;
+    top: calc(50% - 12px);
+  }
+  .radio-item label:before {
+    background: #ff8000fb;
+    height: 20px;
+    width: 20px;
+    left: 21px;
+    top: calc(50%-5px);
+    transform: scale(5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease-in-out 0s;
+  }
+  .radio-item [type="radio"]:checked ~ label {
+    border-color: #ff8000;
+  }
+  .radio-item [type="radio"]:checked ~ label::before {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  /* From uiverse.io by @Ali-Tahmazi99 */
+  .cutom-btn {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #ffffffbb;;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+  background: #0f0f0f47;
+  }
+
+  .cutom-btn::before,
+  .cutom-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+  }
+
+  .cutom-btn::before {
+  left: -10px;
+  background: #572c0172;
+  }
+
+  .cutom-btn::after {
+  right: -10px;
+  background: #ff8000ad;
+  }
+
+  .cutom-btn:hover::before,
+  .cutom-btn:hover::after {
+  width: 58%;
+  }
+
+  .cutom-btn:hover span {
+  color: #ffffff;
+  transition: 0.3s;
+  }
+
+  .cutom-btn span {
+  color: #ffffff;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+  }
+
+ /* Add your existing styles here */
+ .hidden {
+  display: none;
+ }
